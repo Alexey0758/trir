@@ -1,0 +1,170 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 30px;
+  background-color: #f9f9f9;
+  color: #222;
+}
+
+header {
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 22px;
+  margin-bottom: 4px;
+}
+
+main section {
+  padding: 20px;
+  margin-bottom: 24px;
+}
+
+h2 {
+  color: #444;
+  margin-bottom: 12px;
+}
+
+h3 {
+  color: #555;
+  margin: 14px 0 6px;
+}
+
+code {
+  background-color: #eee;
+  padding: 1px 5px;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+footer {
+  margin-top: 20px;
+  color: #888;
+  font-size: 14px;
+}
+
+/* Задание 1 */
+.img-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+/* Задание 3 */
+.bg-box {
+  width: 420px;
+  height: 200px;
+  background-image: url('cathedral.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bg-box p {
+  background-color: rgba(255, 255, 255, 0.75);
+  padding: 6px 14px;
+}
+
+/* Задание 4 */
+.filter-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.filter-gray {
+  filter: grayscale(100%);
+}
+
+.filter-sepia {
+  filter: sepia(80%);
+}
+
+.filter-combo {
+  filter: blur(2px) brightness(1.3);
+}
+
+/* Задание 5 */
+.border-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.border-solid {
+  border: 4px solid red;
+}
+
+.border-dashed {
+  border: 3px dashed blue;
+}
+
+.border-double {
+  border: 6px double green;
+  border-radius: 10px;
+}
+
+/* Задание 6 */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 10px;
+}
+
+th, td {
+  border: 1px solid #aaa;
+  padding: 8px 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #d9c3ac;
+}
+
+caption {
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+/* Задание 7 */
+.hover-zoom {
+  display: block;
+  transition: transform 0.3s;
+  margin-bottom: 16px;
+}
+
+.hover-zoom:hover {
+  transform: scale(1.08);
+}
+
+.hover-shadow {
+  display: block;
+  transition: box-shadow 0.3s, border 0.3s;
+  border: 3px solid transparent; 
+  margin-bottom: 16px;
+}
+
+.hover-shadow:hover {
+  border-color: orange;
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.img-link {
+  display: block;
+  transition: opacity 0.3s;
+}
+
+.img-link:hover {
+  opacity: 0.75;
+}
+
+.image_line {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}

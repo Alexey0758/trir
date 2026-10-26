@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Лабораторная работа №2 — Изображения в HTML</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <h1>Лабораторная работа №2. Работа с изображениями в HTML</h1>
+    <p>История и культура</p>
+  </header>
+
+  <main>
+
+    <!-- Задание 1: тег img -->
+    <section>
+      <h2>Задание 1. Вставка изображений через тег img</h2>
+
+      <h3>Способ 1 — картинка из той же папки, три размера</h3>
+      <div class="img-row">
+        <div>
+          <p>150x100:</p>
+          <img src="file:/E:/ТРИР/Лабы/2/Сайт/cathedral.jpg" alt="Пейзаж" width="150" height="100">
+        </div>
+        <div>
+          <p>300x200:</p>
+          <img src="cathedral.jpg" alt="Пейзаж" width="300" height="200">
+        </div>
+        <div>
+          <p>450x300:</p>
+          <img src="cathedral.jpg" alt="Пейзаж" width="450" height="300">
+        </div>
+      </div>
+
+      <h3>Способ 2 — абсолютный путь к файлу</h3>
+      <p>Файл находится в той же папке, но можно указать полный путь</p>
+      <img src="arch.jpg" alt="Архитектура" width="300" height="200">
+
+      <h3>Способ 3 — картинка из интернета</h3>
+      <img src="https://picsum.photos/seed/history/400/260" alt="Картинка из интернета" width="400" height="260">
+    </section>
+
+    <!-- Задание 2: SVG -->
+    <section>
+      <h2>Задание 2. Вставка изображения через svg</h2>
+      <p>SVG-иконка книги, ведёт на сайт Российской государственной библиотеки:</p>
+      <a href="https://www.rsl.ru" target="_blank" title="Открыть сайт РГБ">
+        <svg width="90" height="90" viewBox="0 0 64 64">
+          <rect x="8" y="6" width="40" height="52" rx="3" fill="#c8a96e"/>
+          <rect x="12" y="6" width="5" height="52" fill="#9a6830"/>
+          <line x1="20" y1="20" x2="42" y2="20" stroke="white" stroke-width="2"/>
+          <line x1="20" y1="28" x2="42" y2="28" stroke="white" stroke-width="2"/>
+          <line x1="20" y1="36" x2="35" y2="36" stroke="white" stroke-width="2"/>
+        </svg>
+      </a>
+    </section>
+
+    <!-- Задание 3: CSS фон -->
+    <section>
+      <h2>Задание 3. Фоновое изображение через CSS</h2>
+      <p>Свойство <code>background-image</code> в CSS:</p>
+      <div class="bg-box">
+        <p>Это текст поверх фонового изображения</p>
+      </div>
+    </section>
+
+    <!-- Задание 4: Фильтры -->
+    <section>
+      <h2>Задание 4. Фильтры на изображение</h2>
+      <div class="filter-row">
+        <div>
+          <p>Оригинал</p>
+          <img src="cathedral.jpg" alt="Оригинал" width="200" height="133">
+        </div>
+        <div>
+          <p>grayscale(100%)</p>
+          <img src="cathedral.jpg" alt="ЧБ" width="200" height="133" class="filter-gray">
+        </div>
+        <div>
+          <p>sepia(80%)</p>
+          <img src="cathedral.jpg" alt="Сепия" width="200" height="133" class="filter-sepia">
+        </div>
+        <div>
+          <p>blur(2px) brightness(1.3)</p>
+          <img src="cathedral.jpg" alt="Размытие" width="200" height="133" class="filter-combo">
+        </div>
+      </div>
+    </section>
+
+    <!-- Задание 5: Рамки -->
+    <section>
+      <h2>Задание 5. Рамка вокруг изображения</h2>
+      <div class="border-row">
+        <div>
+          <p>solid, красная</p>
+          <img src="arch.jpg" alt="рамка 1" width="220" height="147" class="border-solid">
+        </div>
+        <div>
+          <p>dashed, синяя</p>
+          <img src="arch.jpg" alt="рамка 2" width="220" height="147" class="border-dashed">
+        </div>
+        <div>
+          <p>double, зелёная + border-radius</p>
+          <img src="arch.jpg" alt="рамка 3" width="220" height="147" class="border-double">
+        </div>
+      </div>
+    </section>
+
+    <!-- Задание 6: Таблица с картинками -->
+    <section>
+      <h2>Задание 6. Изображение в таблице</h2>
+      <p>Таблица из лабораторной №1 с добавленным столбцом «Иллюстрация»:</p>
+      <table>
+        <caption>Хронология русской культуры</caption>
+        <thead>
+          <tr>
+            <th>Эпоха</th>
+            <th>Период</th>
+            <th>Ключевые события</th>
+            <th>Особенности</th>
+            <th>Иллюстрация</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Древняя Русь</td>
+            <td>до V века</td>
+            <td>Союз племён, языческая Русь</td>
+            <td>Зодчество, орнамент, деревянное творчество</td>
+            <td><img src="https://charmtravel.ru/wp-content/uploads/2021/11/dji_0840_1024.jpg" alt="Новгородский кремль" width="120" height="80"></td>
+          </tr>
+          <tr>
+            <td>Средние века</td>
+            <td>V–XV вв.</td>
+            <td>Крещение Руси, крестовые походы</td>
+            <td>Иконопись, развитие ремёсел</td>
+            <td><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/Andrey_Rublev_-_%D0%A1%D0%B2._%D0%A2%D1%80%D0%BE%D0%B8%D1%86%D0%B0_-_Google_Art_Project.jpg/330px-Andrey_Rublev_-_%D0%A1%D0%B2._%D0%A2%D1%80%D0%BE%D0%B8%D1%86%D0%B0_-_Google_Art_Project.jpg?utm_source=ru.wikipedia.org&utm_campaign=parser&utm_content=thumbnail" alt="Троица Рублёва" width="80" height="100"></td>
+          </tr>
+          <tr>
+            <td>Новое время</td>
+            <td>XVI–XIX вв.</td>
+            <td>Промышленная революция, расцвет искусств</td>
+            <td>Наука, фабрики, торговля</td>
+            <td><img src="arch.jpg" alt="Архитектура" width="120" height="80"></td>
+          </tr>
+          <tr>
+            <td>Новейшее время</td>
+            <td>XX–XXI вв.</td>
+            <td>Мировые войны, цифровая революция</td>
+            <td>Кино, интернет, массмедиа</td>
+            <td><img src="https://image.zeh.media/i/b/b1Io0YpzpH/860.png" alt="Культура" width="120" height="80"></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Задание 7: Hover + картинка-ссылка -->
+    <section>
+      <h2>Задание 7. Эффекты наведения и картинка-ссылка</h2>
+      <div class="image_line">
+      <div>
+        <p>Наведи мышь — картинка увеличится:</p>
+        <img src="cathedral.jpg" alt="hover zoom" width="300" height="200" class="hover-zoom">
+      </div>
+      <div>
+      <p>Наведи мышь — появится тень и рамка:</p>
+      <img src="arch.jpg" alt="hover shadow" width="300" height="200" class="hover-shadow">
+      </div>
+      <div>
+      <p>Нажмите на картинку — откроется Википедия:</p>
+      <a href="https://ru.wikipedia.org/wiki/%D0%98%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%8F_%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B8" target="_blank">
+        <img src="culture.jpg" alt="История России" width="300" height="200" class="img-link">
+      </a>
+      </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Лабораторная работа №2</p>
+  </footer>
+
+</body>
+</html>
